@@ -1,16 +1,15 @@
-import Link from "next/link"
-import { Inter } from 'next/font/google'
-import styles from './page.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import Posts from "./components/Posts";
 
 export default function Home() {
   return (
-    <main>
-      <h1>Home Page</h1>
-      <p>
-        <Link href="/users">Users</Link>
+    <main className="px-6 mx-auto">
+      <p className="mt-12 mb-12 text-3xl text-center dark:text-white">
+        Hello and Welcome 👋&nbsp;
+        <span className="whitespace-nowrap">
+          I'm <span className="font-bold">Ivan Barbashov</span>.
+        </span>
       </p>
+      <Posts />
     </main>
-  )
+  );
 }
